@@ -10,7 +10,6 @@ describe('', () => {
         cy.get('#item-1').contains('Check Box').click()
         cy.get('.rct-checkbox').click()
         cy.get('#result').should('have.text', 'You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
-
     });
 
     it("Elements lenght", () => {
