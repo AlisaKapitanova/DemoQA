@@ -11,5 +11,11 @@ describe('', () => {
         cy.get('.rct-checkbox').click()
         cy.get('#result').should('have.text', 'You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile')
 
-    })
-})
+    });
+
+    it("Elements lenght", () => {
+        cy.visit('https://demoqa.com/');
+        cy.get('.card-body').should ('have.length',6).should('be.visible')
+    });
+
+});
