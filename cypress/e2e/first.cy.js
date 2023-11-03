@@ -11,8 +11,16 @@ describe('', () => {
     });
 
     it("Elements lenght", () => {
-        cy.visit('https://demoqa.com/');
         cy.get('.card-body').should ('have.length',6).should('be.visible')
     });
+
+    it("Menu title", () => {
+        
+        let title = ["Elements", "Forms", "Alerts, Frame & Windows", "Widgets", "Interactions", "Book Store Application"]
+
+        cy.get(".card").each((el, ind) => {
+            cy.wrap(el).should('have.text', title[ind])
+        })
+    })
 
 });
