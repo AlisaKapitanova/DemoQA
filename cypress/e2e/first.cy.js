@@ -23,4 +23,14 @@ describe('', () => {
         })
     })
 
+     it("Elements - Buttons - Click", () => {
+       cy.get("div.card").contains("Elements").click();
+       cy.get("#item-4").click();
+       cy.get(
+         "div.col-12.mt-4.col-md-6 div:nth-child(2) div:nth-child(3) button"
+       ).click();
+       cy.get("p#dynamicClickMessage")
+         .should("be.visible")
+         .and("have.text", "You have done a dynamic click");
+     });
 });
