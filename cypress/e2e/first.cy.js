@@ -1,3 +1,7 @@
+/// <reference types="cypress"/>
+
+import url from '../fixtures/tutorialsPage.json'
+
 describe('', () => {
     it('Tools QA returns to mainPage', () => {
         cy.get("header a").should("have.attr", 'href', 'https://demoqa.com');
@@ -22,9 +26,11 @@ describe('', () => {
             cy.wrap(el).should('have.text', title[ind])
         })
     })
-    it('Check the redirection from home page', () => {
-    cy.get('.home-banner').invoke('removeAttr', 'target').click()
-   
+    it('Check the redirection from home page to Tutotials page', () => {
+        cy.get('.home-banner').invoke('removeAttr', 'target').click()
+        cy.request(url)
+        .its('body').should('include', 'Tools QA - Selenium Training')
+           
 }) 
 
      it("Elements - Buttons - Click", () => {
@@ -37,4 +43,5 @@ describe('', () => {
          .should("be.visible")
          .and("have.text", "You have done a dynamic click");
      });
+    
 });
