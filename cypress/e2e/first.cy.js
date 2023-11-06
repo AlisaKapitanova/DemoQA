@@ -38,7 +38,7 @@ describe('', () => {
          .and("have.text", "You have done a dynamic click");
      });
 
-     it.only('Confirm Pop-up window: click on OK', () => {
+     it('Confirm Pop-up window: click on OK', () => {
         cy.get('div:nth-child(3) div:nth-child(1) div:nth-child(3) h5:nth-child(1)').click();
         cy.get('div[class="element-list collapse show"] li[id="item-1"] span[class="text"]').click();
         cy.get('#confirmButton').click();
