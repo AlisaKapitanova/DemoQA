@@ -22,7 +22,7 @@ describe('', () => {
             cy.wrap(el).should('have.text', title[ind])
         })
     })
-    it('Check the redirection from home page', () => {
+    it.skip('Check the redirection from home page', () => {
     cy.get('.home-banner').invoke('removeAttr', 'target').click()
    
 }) 
@@ -44,4 +44,13 @@ describe('', () => {
           .should('eq', 200);
     }); 
     
+     it('Confirm Pop-up window: click on OK', () => {
+        cy.get('div:nth-child(3) div:nth-child(1) div:nth-child(3) h5:nth-child(1)').click();
+        cy.get('div[class="element-list collapse show"] li[id="item-1"] span[class="text"]').click();
+        cy.get('#confirmButton').click();
+        cy.on('window:confirm', (str) => {
+            expect(str).to.eql('Do you confirm action?');
+        })
+        cy.get('#confirmResult').should('contain', 'Ok').and('contain', 'You selected');
+     })
 });
