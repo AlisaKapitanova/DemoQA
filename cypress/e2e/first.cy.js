@@ -53,4 +53,15 @@ describe('', () => {
         })
         cy.get('#confirmResult').should('contain', 'Ok').and('contain', 'You selected');
      })
+
+     it('Click one menu element', () => {
+
+        cy.get('div.card:first-child').click();
+        cy.url().should('equal', 'https://demoqa.com/elements');       
+        cy.get('div.main-header')
+          .then(($el) => {
+            let textEl = $el.text()
+            expect(textEl).to.equal('Elements')            
+          })
+      });
 });
