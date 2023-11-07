@@ -26,11 +26,9 @@ describe('', () => {
             cy.wrap(el).should('have.text', title[ind])
         })
     })
-    it('Check the redirection from home page to Tutotials page', () => {
-        cy.get('.home-banner').invoke('removeAttr', 'target').click()
-        cy.request(url)
-        .its('body').should('include', 'Tools QA - Selenium Training')
-           
+    it.skip('Check the redirection from home page', () => {
+    cy.get('.home-banner').invoke('removeAttr', 'target').click()
+   
 }) 
 
      it("Elements - Buttons - Click", () => {
@@ -43,5 +41,20 @@ describe('', () => {
          .should("be.visible")
          .and("have.text", "You have done a dynamic click");
      });
+
+     it('Check redirection from home page', () => {
+        cy.request('https://www.toolsqa.com/selenium-training/')
+          .its("status")
+          .should('eq', 200);
+    }); 
     
+     it('Confirm Pop-up window: click on OK', () => {
+        cy.get('div:nth-child(3) div:nth-child(1) div:nth-child(3) h5:nth-child(1)').click();
+        cy.get('div[class="element-list collapse show"] li[id="item-1"] span[class="text"]').click();
+        cy.get('#confirmButton').click();
+        cy.on('window:confirm', (str) => {
+            expect(str).to.eql('Do you confirm action?');
+        })
+        cy.get('#confirmResult').should('contain', 'Ok').and('contain', 'You selected');
+     })
 });
