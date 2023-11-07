@@ -62,6 +62,6 @@ describe('', () => {
           .then(($el) => {
             let textEl = $el.text()
             expect(textEl).to.equal('Elements')            
-          })
+          });
       });
 });
