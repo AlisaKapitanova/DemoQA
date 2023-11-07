@@ -23,9 +23,8 @@ describe('', () => {
         })
     })
     it.skip('Check the redirection from home page', () => {
-    cy.get('.home-banner').invoke('removeAttr', 'target').click()
-   
-}) 
+    cy.get('.home-banner').invoke('removeAttr', 'target')
+    }) 
 
      it("Elements - Buttons - Click", () => {
        cy.get("div.card").contains("Elements").click();
