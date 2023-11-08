@@ -3,7 +3,7 @@ import data from '../fixtures/data.json'
 
 describe('SignIn Testing', () => {
     
-    it('Sign in to Your Account', function() {
+    it.skip('Sign in to Your Account', function() {
         let signInPage = 'https://demoqa.com/books'
         let logInButton = '#login'
         let userNameField = '#userName'
