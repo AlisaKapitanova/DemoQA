@@ -1,0 +1,11 @@
+{
+  "TextBoxElement": "Text Box",
+  "CheckBoxElement": "Check Box",
+  "RadioButtonElement": "Radio Button",
+  "WebTablesElement": "Web Tables",
+  "ButtonsElement": "Buttons",
+  "LinksElement": "Links",
+  "BrokenLinksImagesElement": "Broken Links - Images",
+  "UploadDownloadElement": "Upload and Download",
+  "DynamicPropertiesElement": "Dynamic Properties"
+}
