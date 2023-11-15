@@ -14,6 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+require('cypress-xpath')
 import './commands'
 import './globalHooks'
 import 'cypress-mochawesome-reporter/register';
