@@ -4,9 +4,6 @@ import homePageData from "../fixtures/homePage.json";
 class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
 
-  visitDemoQA() { 
-    cy.visit("https://demoqa.com/");
-  }
   
   chooseElementsCard() {
     this.getElementsCard().click();
