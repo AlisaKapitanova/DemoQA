@@ -3,6 +3,10 @@ import elementsTextBoxData from "../../fixtures/elementsTextBox.json";
 
 const homePage = new HomePage();
 
+beforeEach(() => {
+  cy.visit("https://demoqa.com/");
+});
+
 describe("Elements  > Text Box", () => {
   it("TC_02.01.01.01 | Elements  > Text Box > Verify input fields names", () => {
     homePage
