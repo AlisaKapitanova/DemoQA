@@ -1,4 +1,4 @@
-import HomePage from "../../pageObjects/homePage";
+import HomePage from "../../pageObjects/HomePage.js";
 import elementsTextBoxData from "../../fixtures/elementsTextBox.json";
 
 const homePage = new HomePage();

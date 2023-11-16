@@ -1,4 +1,4 @@
-import ElementsTextBoxPage from "./elementsTextBoxPage";
+import ElementsTextBoxPage from "./ElementsTextBoxPage.js";
 
 class ElementsPage {
   getTextBoxElement = () => cy.get("#item-0");
