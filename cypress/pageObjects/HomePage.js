@@ -1,4 +1,4 @@
-import ElementsPage from "./elementsPage.js";
+import ElementsPage from "../pageObjects/ElementsPage.js";
 import homePageData from "../fixtures/homePage.json";
 
 class HomePage {
