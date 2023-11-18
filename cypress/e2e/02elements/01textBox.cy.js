@@ -15,4 +15,19 @@ describe("Elements  > Text Box", () => {
           );
         });
   });
+  
+  elementsTextBoxData.invalidEmailForValidation.forEach((name, i) => { 
+       it(`TC_02.01.01.02 | Elements  > Text Box > Verify validation of Email input field with invalid email ${name}`, () => {
+         homePage
+           .chooseElementsCard()
+           .chooseTextBoxElement()
+           .typeEmail(name)
+           .clickSubmitButton()
+           .getEmailInputField()
+           .should("have.css", "border")
+           .and("contain", "rgb(255, 0, 0)");
+       });
+  
+  })
+ 
 });

@@ -4,5 +4,13 @@
     "Email",
     "Current Address",
     "Permanent Address"
+  ],
+
+  "invalidEmailForValidation": [
+    "test.test.com",
+    "test@testcom",
+    "test@test.c",
+    "test@.com",
+    "тест@test.com"
   ]
 }
