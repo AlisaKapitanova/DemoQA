@@ -6,7 +6,10 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on)
     },
   },
-
+  viewportWidth: 1920,
+  viewportHeight: 1080,
+  chromeWebSecurity: false,
+  defaultCommandTimeout: 7000,
   video: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
