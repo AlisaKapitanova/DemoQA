@@ -1,3 +1,7 @@
+/// <reference types="cypress"/>
+
+import url from '../fixtures/tutorialsPage.json'
+
 describe('', () => {
     it('Tools QA returns to mainPage', () => {
         cy.get("header a").should("have.attr", 'href', 'https://demoqa.com');
@@ -22,9 +26,11 @@ describe('', () => {
             cy.wrap(el).should('have.text', title[ind])
         })
     })
-    it.skip('Check the redirection from home page', () => {
-    cy.get('.home-banner').invoke('removeAttr', 'target')
-    }) 
+
+    it('Check the redirection from home page', () => {
+    cy.get('.home-banner').invoke('removeAttr', 'target').click()
+    cy.request(url).its('body').should('contain','Selenium Certification Training')
+}) 
 
      it("Elements - Buttons - Click", () => {
        cy.get("div.card").contains("Elements").click();
@@ -37,6 +43,12 @@ describe('', () => {
          .and("have.text", "You have done a dynamic click");
      });
 
+     it('Check redirection from home page', () => {
+        cy.request('https://www.toolsqa.com/selenium-training/')
+          .its("status")
+          .should('eq', 200);
+    }); 
+    
      it('Confirm Pop-up window: click on OK', () => {
         cy.get('div:nth-child(3) div:nth-child(1) div:nth-child(3) h5:nth-child(1)').click();
         cy.get('div[class="element-list collapse show"] li[id="item-1"] span[class="text"]').click();
@@ -46,4 +58,15 @@ describe('', () => {
         })
         cy.get('#confirmResult').should('contain', 'Ok').and('contain', 'You selected');
      })
+
+     it('Click one menu element', () => {
+
+        cy.get('div.card:first-child').click();
+        cy.url().should('equal', 'https://demoqa.com/elements');       
+        cy.get('div.main-header')
+          .then(($el) => {
+            let textEl = $el.text()
+            expect(textEl).to.equal('Elements')            
+          });
+      });
 });
