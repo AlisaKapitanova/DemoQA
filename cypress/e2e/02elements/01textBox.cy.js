@@ -28,6 +28,16 @@ describe("Elements  > Text Box", () => {
            .and("contain", "rgb(255, 0, 0)");
        });
   
-  })
- 
-});
+  });
+
+      it(`TC_02.01.01.02 | Elements  > Text Box > Verify the input field is active and has a blue border`, () => {
+        homePage
+          .chooseElementsCard()
+          .chooseTextBoxElement()
+          .verifyFullNameInputFieldActiveBorder()
+          .verifyEmailInputFieldActiveBorder()
+          .verifyCurrentAddressFieldActiveBorder()
+          .verifyPermanentAddressFieldActiveBorder();
+      });
+})
+
