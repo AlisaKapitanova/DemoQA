@@ -12,5 +12,10 @@
     "test@test.c",
     "test@.com",
     "тест@test.com"
-  ]
+  ],
+
+  "fullName":"James Bond",
+  "email":"james007@mail.com",
+  "currentAddress":"30 Wellington Square, Chelsea",
+  "permanentAddress":"30 Wellington Square, Chelsea"  
 }

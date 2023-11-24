@@ -5,6 +5,7 @@ class ElementsTextBoxPage {
   getCurrentAddressInputField = () => cy.get("textarea#currentAddress");
   getPermanentAddressInputField = () => cy.get("textarea#permanentAddress");
   getSubmitButton = () => cy.get("#submit");
+  getArrayOfOutputFields = () => cy.get("div#output p");
 
   typeEmail(email) {
     this.getEmailInputField().clear().type(email);
@@ -13,11 +14,6 @@ class ElementsTextBoxPage {
 
   clickSubmitButton() {
     this.getSubmitButton().click();
-    return this;
-  }
-
-  clickInputFields(i) {
-    this.getInputFields(i).click();
     return this;
   }
 
@@ -50,6 +46,21 @@ class ElementsTextBoxPage {
       .click()
       .should("have.css", "border")
       .and("contain", "rgb(128, 189, 255)");
+    return this;
+  }
+
+  typeFullName(fullName) {
+    this.getFullNameInputField().clear().type(fullName);
+    return this;
+  }
+
+  typeCurrentAddress(currentAddress) {
+    this.getCurrentAddressInputField().clear().type(currentAddress);
+    return this;
+  }
+
+  typePermanentAddress(permanentAddress) {
+    this.getPermanentAddressInputField().clear().type(permanentAddress);
     return this;
   }
 }
