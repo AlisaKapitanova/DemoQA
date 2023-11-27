@@ -1,7 +1,9 @@
 import HomePage from "../../pageObjects/HomePage.js";
 import elementsTextBoxData from "../../fixtures/elementsTextBox.json";
+import FormPage from "../../pageObjects/FormPage.js";
 
 const homePage = new HomePage();
+const formPage = new FormPage();
 
 describe("Elements  > Text Box", () => {
 
@@ -63,5 +65,21 @@ describe("Elements  > Text Box", () => {
             expect($el.text()).to.be.eq(arrayOfOutputFieldsExpected[idx]);
           });
       });
+      it("TC_02.01.01.05 | Elements  > Practice Form > Verify placeholders", () => {
+        homePage
+        .clickFormCard()
+        formPage
+        .chooseFormElement()
+        .clickFormname()
+        .checkPracticeForm()
+        
+      
+
+    
+       
+        
+        
+     
+})
 })
 
