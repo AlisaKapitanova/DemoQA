@@ -4,5 +4,6 @@
   "AlertsFrameWindowsCard": "Alerts, Frame & Windows",
   "WidgetsCard": "Widgets",
   "InteractionsCard": "Interactions",
-  "BookStoreApplicationCard": "Book Store Application"
+  "BookStoreApplicationCard": "Book Store Application",
+  "LoginCard": "Login"
 }
