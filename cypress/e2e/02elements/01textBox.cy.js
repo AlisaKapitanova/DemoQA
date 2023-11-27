@@ -4,6 +4,14 @@ import elementsTextBoxData from "../../fixtures/elementsTextBox.json";
 const homePage = new HomePage();
 
 describe("Elements  > Text Box", () => {
+
+  const arrayOfOutputFieldsExpected = [
+    `Name:${elementsTextBoxData.fullName}`,
+    `Email:${elementsTextBoxData.email}`,
+    `Current Address :${elementsTextBoxData.currentAddress} `,
+    `Permananet Address :${elementsTextBoxData.permanentAddress}`,
+  ];
+
   it("TC_02.01.01.01 | Elements  > Text Box > Verify input fields names", () => {
       homePage
         .chooseElementsCard()
@@ -38,6 +46,22 @@ describe("Elements  > Text Box", () => {
           .verifyEmailInputFieldActiveBorder()
           .verifyCurrentAddressFieldActiveBorder()
           .verifyPermanentAddressFieldActiveBorder();
+      });
+  
+      it("TC_02.01.01.03 | Elements  > Text Boxs > Verify the submitted information is displayed", () => {
+        homePage
+          .chooseElementsCard()
+          .chooseTextBoxElement()
+          .typeFullName(elementsTextBoxData.fullName)
+          .typeEmail(elementsTextBoxData.email)
+          .typeCurrentAddress(elementsTextBoxData.currentAddress)
+          .typePermanentAddress(elementsTextBoxData.permanentAddress)
+          .clickSubmitButton()
+
+          .getArrayOfOutputFields()
+          .each(($el, idx) => {
+            expect($el.text()).to.be.eq(arrayOfOutputFieldsExpected[idx]);
+          });
       });
 })
 

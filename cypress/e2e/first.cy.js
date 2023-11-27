@@ -26,6 +26,7 @@ describe('', () => {
             cy.wrap(el).should('have.text', title[ind])
         })
     })
+
     it('Check the redirection from home page', () => {
     cy.get('.home-banner').invoke('removeAttr', 'target').click()
     cy.request(url).its('body').should('contain','Selenium Certification Training')
