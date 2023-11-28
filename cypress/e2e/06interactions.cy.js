@@ -20,7 +20,8 @@ describe ('InteracrionsPage', () => {
         selectablePage
         .clickGridBtn()
         .getGridCells().each(($el,idx) => {
-            expect ($el.text()).to.be.equal(data.cellsNames[idx]); 
+        expect ($el.text()).to.be.equal(data.cellsNames[idx]); 
         })    
 })
+
 })
