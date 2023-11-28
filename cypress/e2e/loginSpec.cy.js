@@ -12,7 +12,7 @@ const profilePage = new ProfilePage();
 
 describe('Login test suit', () => {
     
-    it.only("TC_07.01.17 | Verify Succesfull Login", () => {
+    it("TC_07.01.17 | Verify Succesfull Login", () => {
         homePage
             .chooseBookStoreApplicationCard()
         bookStore
