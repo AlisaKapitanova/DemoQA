@@ -1,6 +1,6 @@
 class SelectablePage {
     getGridBtn = () => cy.get("#demo-tab-grid");
-    getGridCells = () => cy.get("#gridContainer .list-group-item.list-group-item-action");
+    getGridCells = () => cy.get("#gridContainer .list-group-item");
     
     clickGridBtn() {
       this.getGridBtn().click();
