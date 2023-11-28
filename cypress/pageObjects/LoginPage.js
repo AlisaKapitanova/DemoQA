@@ -1,3 +1,4 @@
+import ProfilePage from "../pageObjects/ProfilePage"
 
 class LoginPage {
     elements = {
@@ -9,18 +10,22 @@ class LoginPage {
 
     typeUserName(userName) {
         this.elements.getUserNameInput().type(userName)
+        return this
     };
 
     typePassword(password) {
         this.elements.getPasswordInput().type(password)
+        return this
     };
 
     clickLoginBtn() {
         this.elements.getLogInBtn().click()
+        return this
     };
 
     clickNewUserBtn() {
         this.elements.getNewUserBtn().click()
+        return this
     };
 
     login(userName, password) {

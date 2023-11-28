@@ -1,19 +1,19 @@
 import ElementsPage from "../pageObjects/ElementsPage.js";
 import homePageData from "../fixtures/homePage.json";
-import LoginPage from "./LoginPage.js";
+import BookStorePage from "./BookStorePage.js";
 
 class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
-  getLoginCard = () => cy.get("div.card").contains(homePageData.LoginCard);
+  getBookStoreApplicationCard = () => cy.get("div.card:last-child");
 
   chooseElementsCard() {
     this.getElementsCard().click();
     return new ElementsPage();
   }
 
-  chooseLoginCard() {
-    this.getLoginCard().click();
-    return new LoginPage();
+  chooseBookStoreApplicationCard() {
+    this.getBookStoreApplicationCard().click();
+    return new BookStorePage();
   }
 }
 

@@ -1,18 +1,26 @@
-/// <reference types="cypress"/>
-import loginPageData from '../../fixtures/loginPageData.json'
-import LoginPage from '../pageObjects/LoginPage'
+
+import loginPageData from "../fixtures/loginPage.json";
+import LoginPage from '../pageObjects/LoginPage';
 import HomePage from '../pageObjects/HomePage';
+import BookStorePage from "../pageObjects/BookStorePage";
+import ProfilePage from "../pageObjects/ProfilePage"
 
 const homePage = new HomePage();
 const loginPage = new LoginPage();
+const bookStore = new BookStorePage();
+const profilePage = new ProfilePage();
 
 describe('Login test suit', () => {
     
-    it.only("TC_ | Login", () => {
+    it.only("TC_07.01.17 | Verify Succesfull Login", () => {
         homePage
-            .chooseLoginCard()
+            .chooseBookStoreApplicationCard()
+        bookStore
+            .ChooseLoginBtn()
         loginPage
-            .login(loginPageData.userName, loginPageData.password)    
+            .login(loginPageData.userName, loginPageData.password)  
+        profilePage
+            .should('be.visible')  
     })
 })
 
