@@ -5,7 +5,8 @@ import InteractionsPage from "./InteractionsPage.js";
 
 class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
-  getFormCard = () => cy.get("div[class=category-cards] div:nth-child(2) div:nth-child(1)").contains(homePageData.Formname)  getInteractionsBtn = () => cy.get('.top-card:nth-child(5)');
+  getFormCard = () => cy.get("div[class=category-cards] div:nth-child(2) div:nth-child(1)").contains(homePageData.Formname);  
+  getInteractionsBtn = () => cy.get('.top-card:nth-child(5)');
   
   chooseElementsCard() {
     this.getElementsCard().click();
