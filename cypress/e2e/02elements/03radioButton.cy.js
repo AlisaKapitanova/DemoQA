@@ -11,4 +11,20 @@ describe("Elements > Radio Button", () => {
       .getQuestion()
       .should("have.text", elementsRadioButtonData.questionOfPage);
   });
+
+  it("TC_02.03.02|Elements > Radio Button> Verify ", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .verifyNumberOfRadioButtons()
+      .getArrayOfRadioButtonsNames()
+      .then(($elements) => {
+        const namesOfRadioButtons = Cypress.$.makeArray($elements).map(
+          ($el) => $el.innerText
+        );
+        expect(namesOfRadioButtons).to.be.deep.equal(
+          elementsRadioButtonData.namesOfRadioButtonsExpected
+        );
+      });
+  });
 });

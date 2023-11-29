@@ -1,4 +1,9 @@
 
 {
- "questionOfPage":"Do you like the site?"
+ "questionOfPage":"Do you like the site?",
+ "namesOfRadioButtonsExpected":[
+    "Yes",
+    "Impressive",
+    "No"
+ ]
 }
