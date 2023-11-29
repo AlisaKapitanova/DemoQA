@@ -12,7 +12,7 @@ describe("Elements > Radio Button", () => {
       .should("have.text", elementsRadioButtonData.questionOfPage);
   });
 
-  it("TC_02.03.02|Elements > Radio Button> Verify ", () => {
+  it("TC_02.03.02|Elements > Radio Button > Verify number and name of radio buttons", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
