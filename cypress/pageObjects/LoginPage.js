@@ -4,8 +4,8 @@ class LoginPage {
     elements = {
         getUserNameInput: () => cy.get('#userName'),
         getPasswordInput: () => cy.get('#password'),
-        getNewUserBtn : () => cy.get('#newUser'),
-        getLogInBtn: () => cy.get("#login")
+        getNewUserBtn: () => cy.get('#newUser'),
+        getLogInBtn: () => cy.get('#login')
     };
 
     typeUserName(userName) {

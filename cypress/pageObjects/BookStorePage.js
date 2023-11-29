@@ -2,6 +2,7 @@ import LoginPage from "../pageObjects/LoginPage";
 
 class BookStorePage {
     getLoginBtn = () => cy.get('#login');
+    getUserNameValue = () => cy.get('#userName-value')
 
     ChooseLoginBtn() {
         this.getLoginBtn().click();
