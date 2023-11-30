@@ -6,6 +6,9 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on)
     },
   },
+  env: {
+    apiBaseUrl: 'https://demoqa.com/swagger'
+},
   viewportWidth: 1920,
   viewportHeight: 1080,
   chromeWebSecurity: false,

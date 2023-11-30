@@ -1,8 +1,20 @@
 // <reference types="cypress"/>
+const API_BASE_URL = Cypress.env('apiBaseUrl')
+let dataFixtures;
+let CREATED_ID;
+let TOKEN_AUTH;
 
-describe('API', () => {
+describe('apiSpec', () => {
 
-    describe('GET DemoQA', () => {
+
+    beforeEach(function () {
+        cy.fixture('apiData').then(data => {
+            dataFixtures = data;
+            return dataFixtures;
+        });
+    });
+
+    describe(' DemoQAVerify Successful User Information Retrieval', () => {
 
         const getResponse = () =>
             cy.request({
@@ -10,7 +22,7 @@ describe('API', () => {
                 url: 'https://demoqa.com/'
             })
 
-        it('Verify response status', () => {
+        it('AT_07.04.04', () => {
             getResponse()
             .its('status')
             .should('be.eq', 200)
@@ -24,4 +36,6 @@ describe('API', () => {
             })
         })
     })
+
+
 })
