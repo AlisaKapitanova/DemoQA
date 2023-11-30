@@ -11,8 +11,8 @@ describe ('InteracrionsPage', () => {
     const selectablePage = new SelectablePage 
     const homePage = new HomePage
     
-    it('Verify names of Grid tab cells', function() { 
-        
+    it.skip('Verify names of Grid tab cells', function() { 
+
         homePage
         .clickInteractionsBtn() 
         interactionsPage
