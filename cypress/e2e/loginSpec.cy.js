@@ -20,6 +20,15 @@ describe('Login test suit', () => {
         bookStore
             .getUserNameValue().should('have.text', loginPageData.userName)
     })
+
+    it.only("TC_07.01.16 | Verify Succesfull Logout", () => {
+        cy.login(loginPageData.userName, loginPageData.password)
+        bookStore
+            .chooseLogoutBtn()
+        loginPage
+            .elements.getWelcomeMessage().should('have.text', loginPageData.message)
+
+    })
 })
 
 
