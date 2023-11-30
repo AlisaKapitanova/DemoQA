@@ -5,7 +5,7 @@ class SelectablePage {
     clickGridBtn() {
       this.getGridBtn().click();
       return this;
-    }.
+    }
   }
   
   export default SelectablePage;
