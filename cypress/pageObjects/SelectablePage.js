@@ -3,9 +3,9 @@ class SelectablePage {
     getGridCells = () => cy.get("#gridContainer .list-group-item");
     
     clickGridBtn() {
-      this.getGridBtn().click();
+      this.getGridBtn().should('be.visible').click();
       return this;
-    }
+    }.
   }
   
   export default SelectablePage;
