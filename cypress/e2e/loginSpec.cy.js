@@ -14,7 +14,7 @@ describe('Login test suit', () => {
         homePage
             .chooseBookStoreApplicationCard()
         bookStore
-            .ChooseLoginBtn()
+            .chooseLoginBtn()
         loginPage
             .login(loginPageData.userName, loginPageData.password)  
         bookStore
