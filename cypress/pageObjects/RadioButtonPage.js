@@ -4,6 +4,8 @@ class RadioButtonPage {
   getArrayOfRadioButtonsNames = () => cy.get("label.custom-control-label");
   getYesRadioButton = () => cy.get("input#yesRadio");
   getYesVerifyingText = () => cy.get("p.mt-3");
+  getImpressiveRadioButton = () => cy.get("input#impressiveRadio");
+  getImpressiveVerifyingText = () => cy.get("p.mt-3");
 
   verifyNumberOfRadioButtons() {
     this.getArrayOfRadioButtons().should("have.length", 3);
@@ -12,6 +14,11 @@ class RadioButtonPage {
 
   checkYesRadioButton() {
     this.getYesRadioButton().should("exist").check({ force: true });
+    return this;
+  }
+
+  checkImpressiveRadioButton() {
+    this.getImpressiveRadioButton().should("exist").check({ force: true });
     return this;
   }
 }

@@ -36,4 +36,13 @@ describe("Elements > Radio Button", () => {
       .getYesVerifyingText()
       .should("have.text", elementsRadioButtonData.yesVerifyingText);
   });
+
+  it("TC_02.03.04 | Elements > Radio Button> Verify positive rating ('Impressive' button)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .checkImpressiveRadioButton()
+      .getImpressiveVerifyingText()
+      .should("have.text", elementsRadioButtonData.impressiveVerifyingText)
+  });
 });
