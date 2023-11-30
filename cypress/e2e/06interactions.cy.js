@@ -11,7 +11,7 @@ describe ('InteractionsPage', () => {
     const selectablePage = new SelectablePage 
     const homePage = new HomePage
 
-    it('Verify names of Grid tab cells', function() { 
+    it('Verify names of Grid cells', function() { 
 
         homePage
         .clickInteractionsBtn() 
