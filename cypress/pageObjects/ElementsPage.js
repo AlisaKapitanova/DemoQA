@@ -1,5 +1,5 @@
 import ElementsTextBoxPage from "./ElementsTextBoxPage.js";
-import RadioButtonPage from "../pageObjects/RadioButtonPage.js"
+import RadioButtonPage from "../pageObjects/RadioButtonPage.js";
 
 class ElementsPage {
   getTextBoxElement = () => cy.get("#item-0");
@@ -12,7 +12,7 @@ class ElementsPage {
 
   chooseRadioButtonElement() {
     this.getRadioButtonElement().click();
-    return new RadioButtonPage()
+    return new RadioButtonPage();
   }
 }
 
