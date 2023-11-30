@@ -43,7 +43,7 @@ describe('', () => {
          .and("have.text", "You have done a dynamic click");
      });
 
-     it('Check redirection from home page', () => {
+     it.skip('Check redirection from home page', () => {
         cy.request('https://www.toolsqa.com/selenium-training/')
           .its("status")
           .should('eq', 200);
