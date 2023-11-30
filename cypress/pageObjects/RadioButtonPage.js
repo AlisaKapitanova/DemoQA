@@ -6,6 +6,7 @@ class RadioButtonPage {
   getYesVerifyingText = () => cy.get("p.mt-3");
   getImpressiveRadioButton = () => cy.get("input#impressiveRadio");
   getImpressiveVerifyingText = () => cy.get("p.mt-3");
+  getNoRadioButton = () => cy.get("input#noRadio");
 
   verifyNumberOfRadioButtons() {
     this.getArrayOfRadioButtons().should("have.length", 3);

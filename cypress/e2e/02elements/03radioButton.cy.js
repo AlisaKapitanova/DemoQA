@@ -43,6 +43,15 @@ describe("Elements > Radio Button", () => {
       .chooseRadioButtonElement()
       .checkImpressiveRadioButton()
       .getImpressiveVerifyingText()
-      .should("have.text", elementsRadioButtonData.impressiveVerifyingText)
+      .should("have.text", elementsRadioButtonData.impressiveVerifyingText);
+  });
+
+  it("TC_02.03.05 | Elements > Radio Button> Verify Prevention of Negative Rating ('No' button is disabled)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .getNoRadioButton()
+      .should("exist")
+      .and("be.disabled");
   });
 });
