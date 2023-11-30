@@ -27,4 +27,31 @@ describe("Elements > Radio Button", () => {
         );
       });
   });
+
+  it("TC_02.03.03 | Elements > Radio Button> Verify positive rating ('Yes' button)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .checkYesRadioButton()
+      .getYesVerifyingText()
+      .should("have.text", elementsRadioButtonData.yesVerifyingText);
+  });
+
+  it("TC_02.03.04 | Elements > Radio Button> Verify positive rating ('Impressive' button)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .checkImpressiveRadioButton()
+      .getImpressiveVerifyingText()
+      .should("have.text", elementsRadioButtonData.impressiveVerifyingText);
+  });
+
+  it("TC_02.03.05 | Elements > Radio Button> Verify Prevention of Negative Rating ('No' button is disabled)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .getNoRadioButton()
+      .should("exist")
+      .and("be.disabled");
+  });
 });
