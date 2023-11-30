@@ -10,9 +10,9 @@ describe ('InteracrionsPage', () => {
     const interactionsPage = new InteractionsPage 
     const selectablePage = new SelectablePage 
     const homePage = new HomePage
-    
-    it.skip('Verify names of Grid tab cells', function() { 
 
+    it('Verify names of Grid tab cells', function() { 
+         
         homePage
         .clickInteractionsBtn() 
         interactionsPage
@@ -21,7 +21,7 @@ describe ('InteracrionsPage', () => {
         .clickGridBtn()
         .getGridCells().each(($el,idx) => {
         expect($el.text()).to.be.equal(data.cellsNames[idx]); 
-        })    
-})
+  })    
+ })
 
 })
