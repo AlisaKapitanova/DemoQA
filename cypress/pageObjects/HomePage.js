@@ -16,7 +16,7 @@ class HomePage {
   }
 
  clickInteractionsBtn() {
-  this.getInteractionsBtn().should('be.visible').click();
+  this.getInteractionsBtn().click();
   return new InteractionsPage();
 }
 
