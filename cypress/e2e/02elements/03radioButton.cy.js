@@ -27,4 +27,13 @@ describe("Elements > Radio Button", () => {
         );
       });
   });
+
+  it("TC_02.03.03 | Elements > Radio Button> Verify positive rating ('Yes' button)", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .checkYesRadioButton()
+      .getYesVerifyingText()
+      .should("have.text", elementsRadioButtonData.yesVerifyingText);
+  });
 });
