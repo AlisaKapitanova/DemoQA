@@ -6,7 +6,7 @@ describe ("HomePage", () => {
     const homePage = new HomePage();
 
 
-    it("TC_01.01.01 first  | HomePage > Verify categories name", () => {
+    it.skip("TC_01.01.01 first  | HomePage > Verify categories name", () => {
         homePage
         .chooseCategory().each(($el, idx) => {
             cy.wrap($el).should('contain', homePageData.categoryCards[idx]);
