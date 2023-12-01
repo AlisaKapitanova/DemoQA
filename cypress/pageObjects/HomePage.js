@@ -7,6 +7,7 @@ class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
   getBookStoreApplicationCard = () => cy.get("div.card:last-child");
   getFormCard = () => cy.get("div[class=category-cards] div:nth-child(2) div:nth-child(1)").contains(homePageData.Formname);
+  getCategory = () => cy.get(".category-cards");
   
   chooseElementsCard() {
     this.getElementsCard().click();
@@ -21,6 +22,11 @@ class HomePage {
   clickFormCard() {
     this.getFormCard().click()
     return new FormPage()
+  }
+
+  chooseCategory() {
+    this.getCategory().click();
+    return this
   }
   
 }
