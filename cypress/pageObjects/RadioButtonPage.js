@@ -22,5 +22,25 @@ class RadioButtonPage {
     this.getImpressiveRadioButton().should("exist").check({ force: true });
     return this;
   }
+
+  verifyYesRadioButtonChecked() {
+    this.getYesRadioButton().should("be.checked");
+    return this;
+  }
+
+  verifyImpressiveButtonChecked() {
+    this.getImpressiveRadioButton().should("be.checked");
+    return this;
+  }
+
+  verifyYesRadioButtonUnchecked() {
+    this.getYesRadioButton().should("not.be.checked");
+    return this;
+  }
+
+  verifyImpressiveRadioButtonUnchecked() {
+    this.getImpressiveRadioButton().should("not.be.checked");
+    return this;
+  }
 }
 export default RadioButtonPage;
