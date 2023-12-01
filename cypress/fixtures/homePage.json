@@ -7,5 +7,8 @@
   "BookStoreApplicationCard": "Book Store Application",
   "LoginCard": "Login",
   "Formname": "Form",
-  "Practice": "Practice Form"
+  "Practice": "Practice Form",
+
+  "category-cards" : ["Elements", "Forms", "Alerts, Frame & Windows", "Widgets", "Interactions", "Book Store Application"]
+
 }
