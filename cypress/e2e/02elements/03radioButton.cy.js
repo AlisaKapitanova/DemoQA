@@ -54,4 +54,17 @@ describe("Elements > Radio Button", () => {
       .should("exist")
       .and("be.disabled");
   });
+
+  it("TC_02.03.06 | Elements > Radio Button>  Verify an ability to check only one radio button", () => {
+    homepage
+      .chooseElementsCard()
+      .chooseRadioButtonElement()
+      .checkYesRadioButton()
+      .verifyYesRadioButtonChecked()
+      .verifyImpressiveRadioButtonUnchecked()
+      .checkImpressiveRadioButton()
+      .verifyImpressiveButtonChecked()
+      .verifyYesRadioButtonUnchecked();
+  });
+  
 });
