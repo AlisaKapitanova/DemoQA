@@ -14,11 +14,20 @@ describe('Login test suit', () => {
         homePage
             .chooseBookStoreApplicationCard()
         bookStore
-            .ChooseLoginBtn()
+            .chooseLoginBtn()
         loginPage
             .login(loginPageData.userName, loginPageData.password)  
         bookStore
             .getUserNameValue().should('have.text', loginPageData.userName)
+    })
+
+    it("TC_07.01.16 | Verify Succesfull Logout", () => {
+        cy.login(loginPageData.userName, loginPageData.password)
+        bookStore
+            .chooseLogoutBtn()
+        loginPage
+            .elements.getWelcomeMessage().should('have.text', loginPageData.message)
+
     })
 })
 
