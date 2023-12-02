@@ -3,6 +3,7 @@ import homePageData from "../fixtures/homePage.json";
 import BookStorePage from "./BookStorePage.js";
 import FormPage from "../pageObjects/FormPage.js";
 import WidgetsPage from "./WidgetsPage.js";
+import InteractionsPage from "./InteractionsPage.js";
 
 class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
@@ -10,7 +11,7 @@ class HomePage {
   getFormCard = () => cy.get("div[class=category-cards] div:nth-child(2) div:nth-child(1)").contains(homePageData.Formname);
   getCategory = () => cy.get(".category-cards");
   getWidgetsCard = () => cy.get("div.card").contains(homePageData.WidgetsCard);
-
+  getInteractionsBtn = () => cy.get('.top-card:nth-child(5)');
   chooseElementsCard() {
     this.getElementsCard().click();
     return new ElementsPage();
@@ -34,6 +35,11 @@ class HomePage {
   chooseWidgetsCard() {
     this.getWidgetsCard().click();
     return new WidgetsPage();
+  }
+
+  clickInteractionsBtn() {
+    this.getInteractionsBtn().click();
+    return new InteractionsPage();
   }
 }
 
