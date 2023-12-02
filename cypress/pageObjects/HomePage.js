@@ -12,7 +12,6 @@ class HomePage {
   getCategory = () => cy.get(".category-cards");
   getWidgetsCard = () => cy.get("div.card").contains(homePageData.WidgetsCard);
   getInteractionsBtn = () => cy.get('.top-card:nth-child(5)');
-  
   chooseElementsCard() {
     this.getElementsCard().click();
     return new ElementsPage();
