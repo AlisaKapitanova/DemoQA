@@ -1,0 +1,10 @@
+{
+    "inputFieldsLables": [
+        "First Name",
+        "Last Name",
+        "Email",
+        "Age",
+        "Salary",
+        "Department"
+    ]
+}
