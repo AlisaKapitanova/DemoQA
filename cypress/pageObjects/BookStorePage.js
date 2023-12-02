@@ -6,8 +6,8 @@ class BookStorePage {
     getUserNameValue = () => cy.get('#userName-value')
     getProfileBtn = () => cy.get('div[class="element-list collapse show"] li[id="item-3"] span[class="text"]')
 
-    ChooseLoginBtn() {
-        this.getLoginBtn().click();
+    chooseLoginBtn() {
+        this.getLoginBtn().should('be.visible').click();
         return new LoginPage();
     }
 

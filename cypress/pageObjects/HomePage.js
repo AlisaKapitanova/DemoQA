@@ -2,13 +2,15 @@ import ElementsPage from "../pageObjects/ElementsPage.js";
 import homePageData from "../fixtures/homePage.json";
 import BookStorePage from "./BookStorePage.js";
 import FormPage from "../pageObjects/FormPage.js";
+import WidgetsPage from "./WidgetsPage.js";
 
 class HomePage {
   getElementsCard = () => cy.get("div.card").contains(homePageData.ElementsCard);
   getBookStoreApplicationCard = () => cy.get("div.card:last-child");
   getFormCard = () => cy.get("div[class=category-cards] div:nth-child(2) div:nth-child(1)").contains(homePageData.Formname);
   getCategory = () => cy.get(".category-cards");
-  
+  getWidgetsCard = () => cy.get("div.card").contains(homePageData.WidgetsCard);
+
   chooseElementsCard() {
     this.getElementsCard().click();
     return new ElementsPage();
@@ -28,7 +30,11 @@ class HomePage {
     this.getCategory().click();
     return this
   }
-  
+
+  chooseWidgetsCard() {
+    this.getWidgetsCard().click();
+    return new WidgetsPage();
+  }
 }
 
 export default HomePage;
