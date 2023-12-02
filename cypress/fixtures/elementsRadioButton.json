@@ -1,0 +1,6 @@
+{
+  "questionOfPage": "Do you like the site?",
+  "namesOfRadioButtonsExpected": ["Yes", "Impressive", "No"],
+  "yesVerifyingText": "You have selected Yes",
+  "impressiveVerifyingText": "You have selected Impressive"
+}
