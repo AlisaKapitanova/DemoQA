@@ -11,6 +11,5 @@
   "devDependencies": {
     "cypress": "^13.4.0",
     "cypress-mochawesome-reporter": "^3.6.1",
-    "webpack-cli": "^5.1.4"
   }
 }
