@@ -14,7 +14,7 @@ describe('07.01 Book Store Application > Login', () => {
         homePage
             .chooseBookStoreApplicationCard()
         bookStore
-            .chooseLoginBtn()
+            .clickLoginBtn()
         loginPage
             .login(loginPageData.userName, loginPageData.password)  
         bookStore
@@ -24,7 +24,7 @@ describe('07.01 Book Store Application > Login', () => {
     it("TC_07.01.16 | Verify Succesfull Logout", () => {
         cy.login(loginPageData.userName, loginPageData.password)
         bookStore
-            .chooseLogoutBtn()
+            .clickLogoutBtn()
         loginPage
             .elements.getWelcomeMessage().should('have.text', loginPageData.message)
 

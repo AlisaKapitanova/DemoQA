@@ -21,7 +21,7 @@ class LoginPage {
 
     clickLoginBtn() {
         this.elements.getLogInBtn().should('be.visible').click()
-        return this
+        return new ProfilePage()
     };
 
     clickNewUserBtn() {

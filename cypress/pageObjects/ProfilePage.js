@@ -1,9 +1,9 @@
 
 class ProfilePage {
-    getDeleteAllBooksBtn = () => cy.get('#submit:nth-child(1)');
+    getDeleteAllBooksBtn = () => cy.get('div.do button#submit');
 
     clickDeleteAllBtn() {
-        this.getDeleteAllBooksBtn().should('be.visible').click()
+        this.getDeleteAllBooksBtn().click()
         return this
     }
 
