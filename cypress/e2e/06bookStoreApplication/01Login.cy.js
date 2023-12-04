@@ -11,12 +11,7 @@ const bookStore = new BookStorePage();
 describe('07.01 Book Store Application > Login', () => {
     
     it("TC_07.01.17 | Verify Succesfull Login", () => {
-        homePage
-            .chooseBookStoreApplicationCard()
-        bookStore
-            .clickLoginBtn()
-        loginPage
-            .login(loginPageData.userName, loginPageData.password)  
+        cy.login(loginPageData.userName, loginPageData.password)
         bookStore
             .getUserNameValue().should('have.text', loginPageData.userName)
     })
