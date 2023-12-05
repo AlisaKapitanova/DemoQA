@@ -12,6 +12,8 @@ class HomePage {
   getCategory = () => cy.get(".category-cards");
   getWidgetsCard = () => cy.get("div.card").contains(homePageData.WidgetsCard);
   getInteractionsBtn = () => cy.get('.top-card:nth-child(5)');
+  getCards = () => cy.get('.card');
+
   chooseElementsCard() {
     this.getElementsCard().click();
     return new ElementsPage();
@@ -40,6 +42,13 @@ class HomePage {
   clickInteractionsBtn() {
     this.getInteractionsBtn().click();
     return new InteractionsPage();
+  }
+
+  clickCards(cardName, index) {
+    this.getCards().eq(index).as('card')
+    cy.get('@card').contains(cardName)
+    cy.get('@card').click()
+    return cy.url()
   }
 }
 

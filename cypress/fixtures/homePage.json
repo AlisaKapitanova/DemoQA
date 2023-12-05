@@ -9,6 +9,19 @@
   "Formname": "Form",
   "Practice": "Practice Form",
 
-  "categoryCards" : ["Elements", "Forms", "Alerts, Frame & Windows", "Widgets", "Interactions", "Book Store Application"]
-
+  "categoryCards" : ["Elements", "Forms", "Alerts, Frame & Windows", "Widgets", "Interactions", "Book Store Application"],
+  
+  "cards": {"categoryCardLinks" : [
+    "/elements",
+    "/forms",
+    "/alertsWindows",
+    "/widgets",
+    "/interaction",
+    "/books"
+  ],
+  "categoryCards" : [
+    "Elements", 
+    "Forms", 
+    "Alerts, Frame & Windows", "Widgets", "Interactions", "Book Store Application"]
+  }
 }
