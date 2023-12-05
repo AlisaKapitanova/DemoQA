@@ -20,5 +20,15 @@ describe ("HomePage", () => {
         });
     })
 
+    homePageData.cards.categoryCards.forEach((cardName, index) => {
+    it("TC_01.01.02 Parametrization | HomePage > Verify card link functionality", function() {
+        homePage
+            .clickCards(cardName, index)
+            .should('contains', homePageData.cards.categoryCardLinks[index])
+        
+        cy.contains(homePageData.cards.categoryCards[index])
+    })
+    })
+
 })
 
