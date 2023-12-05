@@ -22,7 +22,7 @@ Cypress.Commands.add('login', (email, password) => {
     homePage
             .chooseBookStoreApplicationCard()
         bookStore
-            .chooseLoginBtn()
+            .clickLoginBtn()
         loginPage
             .login(loginPageData.userName, loginPageData.password)  
         bookStore

@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "npx cypress open",
+    "login": "npx cypress run --spec cypress/e2e/06bookStoreApplication/01Login.cy.js --browser chrome"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
     "cypress": "^13.4.0",
+    "playwright-webkit": "1.40.1",
     "cypress-mochawesome-reporter": "^3.6.1"
   }
 }

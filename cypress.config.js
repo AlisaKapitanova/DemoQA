@@ -15,6 +15,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 7000,
   video: false,
   reporter: 'cypress-mochawesome-reporter',
+  experimentalWebKitSupport: true,
   reporterOptions: {
     embeddedScreenshots: true,
     reportFilename: 'mochawesome',

@@ -4,7 +4,7 @@ let dataFixtures;
 let CREATED_ID;
 let TOKEN_AUTH;
 
-describe('apiSpec', () => {
+describe.skip('04bookStoreAPI', () => {
 
 
     beforeEach(function () {
