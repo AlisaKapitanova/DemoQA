@@ -4,7 +4,7 @@ import elementsRadioButtonData from "../../fixtures/elementsRadioButton.json";
 const homepage = new HomePage();
 
 describe("Elements > Radio Button", () => {
-  it("TC_02.03.01|Elements > Radio Button> Verify the Question on the page", () => {
+  it("AT_02.03.01|Elements > Radio Button> Verify the Question on the page", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
@@ -12,7 +12,7 @@ describe("Elements > Radio Button", () => {
       .should("have.text", elementsRadioButtonData.questionOfPage);
   });
 
-  it("TC_02.03.02|Elements > Radio Button > Verify number and name of radio buttons", () => {
+  it("AT_02.03.02|Elements > Radio Button > Verify number and name of radio buttons", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
@@ -28,7 +28,7 @@ describe("Elements > Radio Button", () => {
       });
   });
 
-  it("TC_02.03.03 | Elements > Radio Button> Verify positive rating ('Yes' button)", () => {
+  it("AT_02.03.03 | Elements > Radio Button> Verify positive rating ('Yes' button)", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
@@ -37,7 +37,7 @@ describe("Elements > Radio Button", () => {
       .should("have.text", elementsRadioButtonData.yesVerifyingText);
   });
 
-  it("TC_02.03.04 | Elements > Radio Button> Verify positive rating ('Impressive' button)", () => {
+  it("AT_02.03.04 | Elements > Radio Button> Verify positive rating ('Impressive' button)", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
@@ -46,7 +46,7 @@ describe("Elements > Radio Button", () => {
       .should("have.text", elementsRadioButtonData.impressiveVerifyingText);
   });
 
-  it("TC_02.03.05 | Elements > Radio Button> Verify Prevention of Negative Rating ('No' button is disabled)", () => {
+  it("AT_02.03.05 | Elements > Radio Button> Verify Prevention of Negative Rating ('No' button is disabled)", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()
@@ -55,7 +55,7 @@ describe("Elements > Radio Button", () => {
       .and("be.disabled");
   });
 
-  it("TC_02.03.06 | Elements > Radio Button>  Verify an ability to check only one radio button", () => {
+  it("AT_02.03.06 | Elements > Radio Button>  Verify an ability to check only one radio button", () => {
     homepage
       .chooseElementsCard()
       .chooseRadioButtonElement()

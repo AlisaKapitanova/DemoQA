@@ -9,30 +9,14 @@ const buttonsPage = new ButtonsPage
 
 describe("Elements > Testing the buttons", () => {
     it("TC_02.05.01|Elements > Buttons> Buttons are visible on the page", () => {
-    homePage
-    .chooseElementsCard()
-    elementsPage
-    .chooseButtonsElement()
-    buttonsPage
-    .chooseRightBtn()
-    .chooseDoubleClickBtn()
-    .chooseClickMeButton()
-   
-    
-    
-
-    
-    
-    
-
-
-
-
-
-
-   
-      
-            
+        homePage
+            .chooseElementsCard()
+        elementsPage
+            .chooseButtonsElement()
+        buttonsPage
+            .chooseRightBtn()
+            .chooseDoubleClickBtn()
+            .chooseClickMeButton()
     })
 
-    })
+})
