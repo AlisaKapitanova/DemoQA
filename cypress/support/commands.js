@@ -9,9 +9,25 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-//Cypress.Commands.add('login', (email, password) => { ... })
-//
+import LoginPage from '../pageObjects/LoginPage';
+import HomePage from '../pageObjects/HomePage';
+import BookStorePage from "../pageObjects/BookStorePage";
+import loginPageData from "../fixtures/loginPage.json"
+
+const homePage = new HomePage();
+const loginPage = new LoginPage();
+const bookStore = new BookStorePage();
+
+Cypress.Commands.add('login', (email, password) => { 
+    homePage
+            .chooseBookStoreApplicationCard()
+        bookStore
+            .clickLoginBtn()
+        loginPage
+            .login(loginPageData.userName, loginPageData.password)  
+        bookStore
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

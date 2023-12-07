@@ -5,7 +5,8 @@ class LoginPage {
         getUserNameInput: () => cy.get('#userName').should('be.visible'),
         getPasswordInput: () => cy.get('#password'),
         getNewUserBtn: () => cy.get('#newUser'),
-        getLogInBtn: () => cy.get('#login')
+        getLogInBtn: () => cy.get('#login'),
+        getWelcomeMessage: () => cy.get('#userForm div h5')
     };
 
     typeUserName(userName) {
@@ -20,7 +21,7 @@ class LoginPage {
 
     clickLoginBtn() {
         this.elements.getLogInBtn().should('be.visible').click()
-        return this
+        return new ProfilePage()
     };
 
     clickNewUserBtn() {
@@ -34,7 +35,5 @@ class LoginPage {
         this.clickLoginBtn()
         return new ProfilePage()
     };
-
-  
 }
 export default LoginPage
