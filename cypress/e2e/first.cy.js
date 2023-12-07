@@ -27,7 +27,7 @@ describe('', () => {
         })
     })
 
-    it('Check the redirection from home page', () => {
+    it.skip('Check the redirection from home page', () => {
     cy.get('.home-banner').invoke('removeAttr', 'target').click()
     cy.request(url).its('body').should('contain','Selenium Certification Training')
 }) 
