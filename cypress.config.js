@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
   },
   env: {
-    apiBaseUrl: 'https://demoqa.com/swagger'
+    apiBaseUrl: 'https://demoqa.com/'
 },
   viewportWidth: 1920,
   viewportHeight: 1080,
