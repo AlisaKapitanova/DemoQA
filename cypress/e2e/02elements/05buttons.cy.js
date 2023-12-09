@@ -8,7 +8,7 @@ const elementsPage = new ElementsPage()
 const buttonsPage = new ButtonsPage
 
 describe("Elements > Testing the buttons", () => {
-    it("TC_02.05.01|Elements > Buttons> Buttons are visible on the page", () => {
+    it("AT_02.05.01|Elements > Buttons> Buttons are visible on the page", () => {
     homePage
     .chooseElementsCard()
     elementsPage
@@ -16,23 +16,18 @@ describe("Elements > Testing the buttons", () => {
     buttonsPage
     .chooseRightBtn()
     .chooseDoubleClickBtn()
-    .chooseClickMeButton()
-   
-    
-    
-
-    
-    
-    
-
-
-
-
-
-
-   
-      
-            
+    .chooseClickMeButton()            
     })
 
+    it("AT_02.05.01|Elements > Buttons> Verify Button Click Notifications for RightBtn", () => {
+    homePage
+    .chooseElementsCard()
+    elementsPage
+    .chooseButtonsElement()
+    buttonsPage
+    .verifyRightBtn()
+    .getVerifyMessage()
+    .should('be.visible').and('have.text','You have done a right click')
+
+    })
     })
