@@ -16,10 +16,10 @@ describe("Elements > Testing the buttons", () => {
     buttonsPage
     .chooseRightBtn()
     .chooseDoubleClickBtn()
-    .chooseClickMeButton()            
+    .getClickMeBtn().should('be.visible').and('have.text','Click Me')            
     })
 
-    it("AT_02.05.01|Elements > Buttons> Verify Button Click Notifications for RightBtn", () => {
+    it("AT_02.05.02|Elements > Buttons> Verify Button Click Notifications for RightBtn", () => {
     homePage
     .chooseElementsCard()
     elementsPage
@@ -30,4 +30,29 @@ describe("Elements > Testing the buttons", () => {
     .should('be.visible').and('have.text','You have done a right click')
 
     })
+
+    it("AT_02.05.03|Elements > Buttons> Verify Button Click Notifications for ClickMeBtn", () => {
+    homePage
+    .chooseElementsCard()
+    elementsPage
+    .chooseButtonsElement()
+    buttonsPage
+    .verifyClickMeBtn()
+    .getVerifyClickMeMessage()
+    .should('be.visible').and('have.text','You have done a dynamic click')
+     
+    })
+
+    it("AT_02.05.04|Elements > Buttons> Verify Button Click Notifications for DoubleClickBtn", () => {
+        homePage
+        .chooseElementsCard()
+        elementsPage
+        .chooseButtonsElement()
+        buttonsPage
+        .verifyDoubleClickBtn()
+        .getVerifyDoublClickMessage()
+        .should('be.visible').and('have.text','You have done a double click')
+         
+    })
+
     })
