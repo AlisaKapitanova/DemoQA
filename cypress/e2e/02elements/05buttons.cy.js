@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 import HomePage from "../../pageObjects/HomePage.js";
 import ElementsPage from "../../pageObjects/ElementsPage.js";
-import ButtonsPage from "../../pageObjects/ButtonsPage.cy.js"
+import ButtonsPage from "../../pageObjects/ButtonsPage.js"
 
 const homePage = new HomePage();
 const elementsPage = new ElementsPage()

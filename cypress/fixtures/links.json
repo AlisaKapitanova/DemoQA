@@ -1,0 +1,12 @@
+{
+    "Homelink": "#simpleLink",
+    "Dynamiclink": "#dynamicLink",
+    "Createdlink": "#created",
+    "NoContentlink": "#no-content",
+    "Moved": "#moved",
+    "BadRequestlink": "#bad-request",
+    "Unauthorizedlink": "#unauthorized",
+    "Forbidden": "#forbidden",
+    "Invalidlink": "#invalid-url"
+    
+}
