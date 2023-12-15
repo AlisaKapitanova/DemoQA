@@ -6,5 +6,6 @@
         "Age",
         "Salary",
         "Department"
-    ]
+    ],
+    "tooltipDeleteButton":"Delete"
 }
