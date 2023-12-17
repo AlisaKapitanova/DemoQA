@@ -9,7 +9,8 @@ class ElementsWebTablesPage {
     getInputFieldEmail = () => cy.get('#userEmail'); 
     getInputFieldAge = () => cy.get('#age'); 
     getInputFieldSalary = () => cy.get('#salary'); 
-    getInputFieldDepartment = () => cy.get('#department'); 
+    getInputFieldDepartment = () => cy.get('#department');
+    getArrayOfDeleteRowButton = () => cy.get('span[title="Delete"]');
 
     firstName;
     lastName;

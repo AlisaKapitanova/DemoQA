@@ -2,18 +2,14 @@ import ElementsTextBoxPage from "./ElementsTextBoxPage.js";
 import RadioButtonPage from "../pageObjects/RadioButtonPage.js";
 
 
-
+;
+import ElementsWebTablesPage from "./ElementsWebTablesPage.js";
 
 class ElementsPage {
   getTextBoxElement = () => cy.get("#item-0");
   getRadioButtonElement = () => cy.get("#item-2");
-  getButtonElement = () => cy.get('.element-list').contains('Buttons')
-  getLinksElement = () => cy.get('.element-list').contains('Links')
-  getLinksGroupFirst = () =>  cy.get('#linkWrapper h5:nth-child(1) > strong:nth-child(1)')
-  getLinksGroupSecond = () =>  cy.get('#linkWrapper h5:nth-child(4) > strong:nth-child(1)')
-  getHomelink = () => cy.get('#simpleLink')
-
-
+  getButtonElement = () => cy.get(".element-list").contains("Buttons");
+  getWebTablesElement = () => cy.get(".element-list").contains("Web Tables");
 
   chooseTextBoxElement() {
     this.getTextBoxElement().click();
@@ -24,10 +20,16 @@ class ElementsPage {
     this.getRadioButtonElement().click();
     return new RadioButtonPage();
   }
-  chooseButtonsElement (){
-    this.getButtonElement().click()
-    return this
+  chooseButtonsElement() {
+    this.getButtonElement().click();
+    return this;
   }
+
+  chooseWebTablesElement() { 
+    this.getWebTablesElement().click();
+    return new ElementsWebTablesPage();
+  }
+}
   chooseLinksElement (){
     this.getLinksElement().click()
     return this
