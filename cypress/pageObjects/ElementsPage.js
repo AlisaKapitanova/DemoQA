@@ -1,6 +1,8 @@
 import ElementsTextBoxPage from "./ElementsTextBoxPage.js";
 import RadioButtonPage from "../pageObjects/RadioButtonPage.js";
-import ButtonsPage from "../pageObjects/ButtonsPage.cy.js";
+
+
+;
 import ElementsWebTablesPage from "./ElementsWebTablesPage.js";
 
 class ElementsPage {
@@ -28,5 +30,22 @@ class ElementsPage {
     return new ElementsWebTablesPage();
   }
 }
+  chooseLinksElement (){
+    this.getLinksElement().click()
+    return this
+  }
+  chooseLinksGroupFirst () {
+    this.getLinksGroupFirst().should('have.text','Following links will open new tab')
+    return this
+  }
+  
+  chooseLinksGroupSecond (){
+    this.getLinksGroupSecond().should('have.text','Following links will send an api call')
+    return this
+  }
+
+
+}
+  
 
 export default ElementsPage;
