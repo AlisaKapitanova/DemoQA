@@ -29,11 +29,6 @@ class HomePage {
     return new FormPage()
   }
 
-  chooseCategory() {
-    this.getCategory().click();
-    return this
-  }
-
   chooseWidgetsCard() {
     this.getWidgetsCard().click();
     return new WidgetsPage();

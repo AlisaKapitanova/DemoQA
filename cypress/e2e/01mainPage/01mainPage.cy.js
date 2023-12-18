@@ -5,15 +5,7 @@ describe ("HomePage", () => {
 
     const homePage = new HomePage();
 
-
-    it.skip("TC_01.01.01 first  | HomePage > Verify categories name", () => {
-        homePage
-        .chooseCategory().each(($el, idx) => {
-            cy.wrap($el).should('contain', homePageData.categoryCards[idx]);
-        });
-    })
-
-    it("TC_01.01.01 second | HomePage > Verify categories name", () => {
+    it("TC_01.01.01 Categories | HomePage > Verify categories name", () => {
         homePage
         .getCategory().each(($el, idx) => {
             cy.wrap($el).should('contain', homePageData.categoryCards[idx]);
