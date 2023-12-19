@@ -5,6 +5,7 @@ class DynamicPropertiesPage {
 
 checkEnable5sec() {
     this.getEnable5sec()
+    return this 
 }
     
 }

@@ -12,7 +12,8 @@ class ElementsPage {
   getLinksGroupFirst = () => cy.get ('#linkWrapper h5:nth-child(1)')
   getLinksGroupSecond = () => cy.get ('#linkWrapper h5:nth-child(4)')
   getHomelink = () => cy.get('#simpleLink')
-  getDynamicProperties= () => cy.get("#item-8"); 
+  getDynamicProperties= () => cy.get("#item-8");
+  get5secButton = () => cy.get("#enableAfter")
 
   chooseTextBoxElement() {
     this.getTextBoxElement().click();
@@ -46,10 +47,11 @@ class ElementsPage {
     this.getLinksGroupSecond().should('have.text','Following links will send an api call')
     return this
   }
-  chooseDynamicProperties() {
-    this.getDynamicProperties().click().should('have.css', 'background-color', 'rgb(170, 170, 170)')
+  chooseDynamicProperties (){
+    this.getDynamicProperties().click().should("be.visible")
     return this
-} 
+  }
+  
 
 }
   

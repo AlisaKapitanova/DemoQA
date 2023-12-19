@@ -13,6 +13,7 @@ describe("Elements> Dynamic Properties ", () => {
         .chooseElementsCard()
         elementsPage
         .chooseDynamicProperties()
+        .get5secButton().should('have.css', 'background-color', 'rgb(0, 123, 255)')
         
     })
 
