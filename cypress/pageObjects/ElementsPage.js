@@ -1,6 +1,7 @@
 import ElementsTextBoxPage from "./ElementsTextBoxPage.js";
 import RadioButtonPage from "../pageObjects/RadioButtonPage.js";
 import ElementsWebTablesPage from "./ElementsWebTablesPage.js";
+import DynamicPropertiesPage from "./DynamicPropertiesPage.js";
 
 class ElementsPage {
   getTextBoxElement = () => cy.get("#item-0");
@@ -11,6 +12,7 @@ class ElementsPage {
   getLinksGroupFirst = () => cy.get ('#linkWrapper h5:nth-child(1)')
   getLinksGroupSecond = () => cy.get ('#linkWrapper h5:nth-child(4)')
   getHomelink = () => cy.get('#simpleLink')
+  getDynamicProperties= () => cy.get("#item-8"); 
 
   chooseTextBoxElement() {
     this.getTextBoxElement().click();
@@ -44,7 +46,10 @@ class ElementsPage {
     this.getLinksGroupSecond().should('have.text','Following links will send an api call')
     return this
   }
-
+  chooseDynamicProperties() {
+    this.getDynamicProperties().click().should('have.css', 'background-color', 'rgb(170, 170, 170)')
+    return this
+} 
 
 }
   
