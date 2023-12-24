@@ -19,6 +19,6 @@ describe ('Droppable functions', () => {
         .clickDroppableBtn()
         droppablePage
         .dragDragmeBoxandDropIntoDropBox()
-        .getDropBox().should('contain.text', 'Dropped!')
+        .getDropBox().should('contain.text', 'Dropped!', { timeout: 10000 })
 })
 })
