@@ -2,13 +2,6 @@ class DroppablePage {
   getDragmeBox = () => cy.get('#draggable')
   getDropBox = () => cy.get('#droppable')
 
-  // getGridBtn = () => cy.get("#demo-tab-grid");
-  // getGridCells = () => cy.get("#gridContainer .list-group-item-action");
-
-  // clickGridBtn() {
-  //   this.getGridBtn().click();
-  //   return this;
-  // }
 
   dragDragmeBoxandDropIntoDropBox() {
     this.getDragmeBox()
