@@ -2,13 +2,13 @@
 
 import HomePage from "../../pageObjects/HomePage.js";
 import InteractionsPage from "../../pageObjects/InteractionsPage";
-import DroppablePage from "../../pageObjects/DroppablePage.js";
+import InteractionsDroppablePage from "../../pageObjects/InteractionsDroppablePage.js";
 
 
 describe ('Droppable functions', () => {
     
     const interactionsPage = new InteractionsPage 
-    const droppablePage = new DroppablePage 
+    const interactionsDroppablePage = new InteractionsDroppablePage
     const homePage = new HomePage
     
     it ('TC_06.04 | Interactions > Droppable > Simple  ', function() {
@@ -17,7 +17,7 @@ describe ('Droppable functions', () => {
         .clickInteractionsBtn()
         interactionsPage
         .clickDroppableBtn()
-        droppablePage
+        interactionsDroppablePage
         .dragDragmeBoxandDropIntoDropBox()
         .getDropBox().should('contain.text', 'Dropped!', { timeout: 10000 })
 })

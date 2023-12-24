@@ -1,4 +1,4 @@
-class DroppablePage {
+class InteractionsDroppablePage {
   getDragmeBox = () => cy.get('#draggable')
   getDropBox = () => cy.get('#droppable')
 
@@ -14,4 +14,4 @@ class DroppablePage {
 
 }
 
-export default DroppablePage;
+export default InteractionsDroppablePage;

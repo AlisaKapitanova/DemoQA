@@ -1,5 +1,5 @@
 import SelectablePage from "./SelectablePage"
-import DroppablePage from "./DroppablePage";
+import InteractionsDroppablePage from "./InteractionsDroppablePage";
 
 class InteractionsPage {
   getSelectableBtn = () => cy.get(".element-group:nth-child(5) #item-1")
@@ -11,7 +11,7 @@ class InteractionsPage {
   }
   clickDroppableBtn() {
     this.getDroppableBtn().click();
-    return new DroppablePage();
+    return new InteractionsDroppablePage();
   }
 }
 
