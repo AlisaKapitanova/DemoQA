@@ -12,13 +12,7 @@ class ElementsWebTablesPage {
     getInputFieldDepartment = () => cy.get('#department');
     getArrayOfDeleteRowButton = () => cy.get('span[title="Delete"]');
 
-    firstName;
-    lastName;
-    email;
-    age;
-    salary;
-    department;
-    employeеData = [];
+    employeеData;
 
     clickAddButton() {
         this.getAddButton().click();
@@ -31,30 +25,34 @@ class ElementsWebTablesPage {
     };
 
     addNewEmployee() {
-        this.firstName = faker.person.firstName();
-        this.lastName = faker.person.lastName();
-        this.email = faker.internet.email();
-        this.age = faker.datatype.number({ min: 18, max: 99 });
-        this.salary = faker.finance.amount({ min: 1000, max: 20000, dec: 0 });
-        this.department = faker.commerce.department()
+        this.employeeData = {
+            firstName: faker.person.firstName(),
+            lastName: faker.person.lastName(),
+            email: faker.internet.email(),
+            age: faker.datatype.number({ min: 18, max: 99 }),
+            salary: faker.finance.amount({ min: 1000, max: 20000, dec: 0 }),
+            department: faker.commerce.department(),
+        }
 
-        this.employeeData = [(this.getInputFieldFirstName().type(this.firstName)),
-        this.getInputFieldLastName().type(this.lastName),
-        this.getInputFieldEmail().type(this.email),
-        this.getInputFieldAge().type(this.age),
-        this.getInputFieldSalary().type(this.salary),
-        this.getInputFieldDepartment().type(this.department)];
+        this.getInputFieldFirstName().type(this.employeeData.firstName);
+        this.getInputFieldLastName().type(this.employeeData.lastName);
+        this.getInputFieldEmail().type(this.employeeData.email);
+        this.getInputFieldAge().type(this.employeeData.age);
+        this.getInputFieldSalary().type(this.employeeData.salary);
+        this.getInputFieldDepartment().type(this.employeeData.department);
 
         return this;
     };
 
-    checkEmployeeDataInTable(employeeData) {
-        cy.contains(employeeData.firstName).should('exist');
-        cy.contains(employeeData.lastName).should('exist');
-        cy.contains(employeeData.email).should('exist');
-        cy.contains(employeeData.age).should('exist');
-        cy.contains(employeeData.salary).should('exist');
-        cy.contains(employeeData.department).should('exist');
+    checkEmployeeDataInTable() {
+        cy.contains(this.employeeData.firstName).should('exist');
+        cy.contains(this.employeeData.lastName).should('exist');
+        cy.contains(this.employeeData.email).should('exist');
+        cy.contains(this.employeeData.age).should('exist');
+        cy.contains(this.employeeData.salary).should('exist');
+        cy.contains(this.employeeData.department).should('exist');
+
+        return this;
       };
 };
 
