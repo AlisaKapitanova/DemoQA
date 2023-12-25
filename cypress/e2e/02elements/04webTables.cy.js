@@ -7,33 +7,15 @@ const homepage = new HomePage();
 
 describe("Elements  > Web Tables", () => {
 
-    it.skip("TC_02.04.01 | Elements  >  Web Tables >  Verify the possibility of adding a new employee to the table using the Registration Form", () => {
-        cy.visit('https://demoqa.com/webtables');
-
-        webTablesPage
+    it("TC_02.04.01 | Elements  >  Web Tables >  Verify the possibility of adding a new employee to the table using the Registration Form", () => {
+       homepage
+            .chooseElementsCard()
+            .chooseWebTablesElement()
             .clickAddButton()
             .addNewEmployee()
             .clickSubmitButton()
-            // .checkEmployeeDataInTable()
+            .checkEmployeeDataInTable();
     });
-
-    // it.only("TC_02.04.01 | Elements  >  Web Tables >  Verify the possibility of adding a new employee to the table using the Registration Form", () => {
-    //     cy.visit('https://demoqa.com/webtables');
-
-    //     webTablesPage
-    //         .clickAddButton()
-    //         .addNewEmployee()
-    //         .clickSubmitButton()
-
-    //     const employeeData = webTablesPage.employeeData;
-
-    //     webTablesPage
-    //         .clickEditButton()
-    //         .cleanEmployee()
-    //         .addNewEmployee()
-    //         .clickSubmitButton()
-
-    // });
 
     it("TC_02.04.02 | Elements > Web Tables > Verify the 'Delete' button has a tooltip 'Delete'", () => {
       homepage
