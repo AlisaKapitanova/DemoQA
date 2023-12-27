@@ -29,7 +29,7 @@ it("02.06.02 Elements > Links > Created, No Content, Moved, Bad Request, Unautho
     .checkBadRequest()
     .checkUnauthorized()
     .checkForbidden()
-    .checkNotFoun()
+    .checkNotFound()
     .checkCreated()
     cy.request('https://demoqa.com/created')
     .its("status")

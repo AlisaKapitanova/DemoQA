@@ -1,5 +1,3 @@
-import { getScript } from "cypress/types/jquery"
-
 class LinksPage {
     getCreated = () => cy.get("#created")
     getNoContent = () => cy.get("#no-content")
@@ -27,7 +25,7 @@ class LinksPage {
     
     checkBadRequest(){
         this.getBadRequest().click()
-        cy.request('https://demoqa.com/bad-request')
+        cy.request({url: 'https://demoqa.com/bad-request', failOnStatusCode: false})
         .its("status")
         .should('eq', 400);
         return this 
@@ -35,7 +33,7 @@ class LinksPage {
 
     checkUnauthorized(){
         this.getUnauthorized().click()
-        cy.request('https://demoqa.com/unauthorized')
+        cy.request({url: 'https://demoqa.com/unauthorized', failOnStatusCode: false})
         .its("status")
         .should('eq', 401);
         return this 
@@ -43,15 +41,15 @@ class LinksPage {
 
     checkForbidden(){
         this.getForbidden().click()
-        cy.request('https://demoqa.com/forbidden')
+        cy.request({url: 'https://demoqa.com/forbidden', failOnStatusCode: false})
         .its("status")
         .should('eq', 403);
         return this 
     }
 
-    checkNotFoun(){
+    checkNotFound(){
         this.getNotFound().click()
-        cy.request('https://demoqa.com/invalid-url')
+        cy.request({url: 'https://demoqa.com/invalid-url', failOnStatusCode: false})
         .its("status")
         .should('eq', 404);
         return this 
